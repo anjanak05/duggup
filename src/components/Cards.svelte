@@ -59,7 +59,7 @@ export let  image: string;
    </div>
    <!-- code for experience div -->
    <div class="max-w-[987px] w-[157px] ml-[5%] w-full flex flex-wrap items-center justify-left  border border-none">
-<div  class="max-w-[207px] w-[207px] h-[157px] border-dotted border-r-[3px] pr-[2%] text-end flex flex-col justify-center relative">
+<div  class="max-w-[207px] w-[207px] h-[157px] w-full border-dotted border-r-[3px] pr-[2%] text-end flex flex-col justify-center relative">
    
         <img class="w-[36px] h-[36px] ml-auto rounded-full" src={card.logo_icon} alt={card.companyName} />
        <div class="leading-[16px]">
@@ -77,11 +77,12 @@ export let  image: string;
 </div>
    
 </div>
-<div  class="max-w-[761px] w-[761px] h-[99px] px-[48px] py-[24px] ">
+<div  class="max-w-[76%] w-[761%] h-[99px] px-[24px] py-[24px] ">
+    <div class="max-w-[100%] w-[100%] h-[83px] px-[28px] py-[20px] bg-[#fffafa] rounded-xl">
     <p class="text-[20px] font-bold ">{card.designation}</p>
     <p class="text-[12px] text-[#7A9299] text-[#7A9299]" >{card.jobNature}</p>
 </div>
-
+</div>
    </div>
    {/each}
 </div>
