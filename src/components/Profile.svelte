@@ -25,7 +25,7 @@
 </script>
   <!-- profile component -->
 
-<div  class="max-w-[1424px] w-[1424px] h-[200px] relative w-full flex items-center gap-[2%] justify-center"  >
+<div  class="max-w-[1424px] w-[1424px] h-[200px] mb-[3%] relative w-full flex flex-wrap items-center gap-[2%] justify-center"  >
     <div class="border w-[120px] h-[120px]">
             <img src="founder_avatar.png" alt="coFounder_Name" >
               <p class="mt-[15px] w-[128px] h-[56px]  text-[24px] font-bold text-center">{coFounder_Name}</p>
@@ -42,7 +42,7 @@
             </div>
 
         </div>
-        <div class="max-w-[834px] w-[834px] h-[36px] flex justify-between mt-[1%]">
+        <div class="max-w-[834px] w-[834px] h-[36px] flex  justify-between mt-[1%]">
              <button class="flex w-[91px] h-[36px]  justify-center items-center p-[8px] buttonPost rounded">Follow</button>
       <div class="max-w-[174px] w-[174px] h-[28px] flex items-center justify-end">
         <p class="max-w-[115px] w-[115px] h-[20px] flex items-center justify-center gap-[5px]"><span class="text-[14px] font-normal leading-6">My Website</span><img class="w-[12.8px] h-[12.8px]" src={link_external} alt="link_external"> </p>

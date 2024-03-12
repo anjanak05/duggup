@@ -18,7 +18,7 @@ import Card from "./Card.svelte";
     },
     {
         companyName: "BetterUp",
-        logo_icon: "Logo_icon.png",
+        logo_icon: "BetterUp_icon.png",
         place:"San Francisco Bay Area",
         startDate: "Sep 2022",
         endDate: "Dec 2023",
@@ -31,26 +31,57 @@ import Card from "./Card.svelte";
     }
 ];
 export let  description: string;
+export let  image: string;
+
 
 </script>
-   <div  class="max-w-[987px] w-[987px] ml-[5%] mt-[3%] w-full flex items-center justify-left  border border-red-500">
-<div class="max-w-[207px] w-[207px] h-[288px] mx-auto w-full flex items-center justify-between border-dotted border-r-[3px]" >
+<div class="flex flex-wrap">
+{#each cardData as card}
+   <div  class="max-w-[987px] w-[987px] ml-[5%]  w-full flex flex items-center justify-between  border border-none">
+<div class="text-end max-w-[207px] w-[207px] h-[288px] pr-[2%] flex flex-wrap relative border-dotted border-r-[3px] flex flex-col justify-center " >
+<p class="text-[12px] text-[#7A9299]">{card.endDate}</p>
+
+<img class=" max-w-[16px] w-[16px] h-[16px] absolute right-[-10px]" src="Ellipse_small.png" alt="Ellipse_small">
 
 </div>
-<div class="max-w-[764px] w-[764px] h-[274px] mx-auto w-full flex items-center justify-between border border-red-500">
-    {#each cardData as card}
-    <!-- Render the Card component for each object in cardData -->
-    {#each  card.imageDescription as title, description}
-    <Card
-      
-        description ={description}
 
+   
+  <!-- Render the Card component for each object in cardData -->
+  <div class="max-w-[780px] w-[780px] h-[274px] mx-auto w-full gap-[4px] flex flex-wrap items-center justify-evenly border border-none">
+  {#each card.imageDescription as item}
+  <Card 
+      image={item.image}
+      description={item.description}
     />
-    {/each}
-{/each}
+  {/each}
 </div>
-   </div>
-   <div class="max-w-[987px] w-[157px] ml-[5%] mt-[3%] w-full flex items-center justify-left  border border-red-500">
 
    </div>
-  
+   <!-- code for experience div -->
+   <div class="max-w-[987px] w-[157px] ml-[5%] w-full flex flex-wrap items-center justify-left  border border-none">
+<div  class="max-w-[207px] w-[207px] h-[157px] border-dotted border-r-[3px] pr-[2%] text-end flex flex-col justify-center relative">
+   
+        <img class="w-[36px] h-[36px] ml-auto rounded-full" src={card.logo_icon} alt={card.companyName} />
+       <div class="leading-[16px]">
+        <p class="text-[16px] font-bold">{card.companyName}</p>
+        <p class="text-[12px] text-[#7A9299]">{card.place}</p>
+        <p class="text-[12px] text-[#7A9299]">Joined</p>
+        <p class="text-[12px] text-[#7A9299]">{card.startDate}</p>
+       </div>
+
+<div class="absolute right-[-15px]">
+<img class=" max-w-[13px] w-[13px] h-[6px] absolute right-[7px] top-[-236%]" src="chevron_up.png" alt="Ellipse_small">
+
+<img class=" max-w-[28px] w-[28px] h-[27px]  " src="Ellipse_large.png" alt="Ellipse_small">
+
+</div>
+   
+</div>
+<div  class="max-w-[761px] w-[761px] h-[99px] px-[48px] py-[24px] ">
+    <p class="text-[20px] font-bold ">{card.designation}</p>
+    <p class="text-[12px] text-[#7A9299] text-[#7A9299]" >{card.jobNature}</p>
+</div>
+
+   </div>
+   {/each}
+</div>
